@@ -3,19 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Radio Comunidad Paz Valencia</title>
     <style>
         body {
             background: linear-gradient(to bottom, #e3f2fd, #cfd8dc);
             font-family: 'Segoe UI', sans-serif;
             text-align: center;
-            padding: 3rem;
+            padding: 3rem 1rem;
             color: #333;
         }
 
         h1 {
             font-size: 2.5rem;
-            color: #1976d2;
+            color: #1565c0;
         }
 
         p.verso {
@@ -25,32 +26,50 @@
         }
 
         .player-container {
-            background: #ffffffcc;
+            background: #ffffffee;
             border-radius: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             padding: 2rem;
-            display: inline-block;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        button {
+            background-color: #42a5f5;
+            border: none;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            background-color: #1e88e5;
         }
 
         audio {
-            width: 100%;
-            max-width: 400px;
             margin-top: 1rem;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
+
     <h1>Radio Comunidad Paz Valencia</h1>
     <p class="verso">“El Señor es mi pastor, nada me faltará.” — Salmo 23:1</p>
 
     <div class="player-container">
-        <p>Presiona play para comenzar a escuchar:</p>
-        <audio controls>
+        <p>Haz clic para comenzar a escuchar la radio:</p>
+        <button onclick="document.getElementById('radio').play()">🎧 Escuchar Radio</button>
+        <audio id="radio" controls preload="none" crossorigin="anonymous">
             <source src="https://b26c-84-126-228-227.ngrok-free.app/live.mp3" type="audio/mpeg">
             Tu navegador no soporta audio.
         </audio>
     </div>
+
 </body>
 
 </html>
