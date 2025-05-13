@@ -3,78 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radio Comunidad Paz Valencia</title>
     <style>
         body {
-            margin: 0;
+            background: linear-gradient(to bottom, #e3f2fd, #cfd8dc);
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(145deg, #f3f6f9, #dbe9f0);
-            color: #333;
             text-align: center;
-            padding: 2rem;
+            padding: 3rem;
+            color: #333;
         }
 
         h1 {
-            color: #2b3d59;
             font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            color: #1976d2;
         }
 
-        p.verse {
+        p.verso {
             font-style: italic;
-            color: #444c63;
             margin-bottom: 2rem;
-            font-size: 1.1rem;
+            color: #555;
         }
 
         .player-container {
-            background-color: #ffffffcc;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background: #ffffffcc;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 2rem;
-            max-width: 500px;
-            margin: 0 auto;
-            transition: transform 0.3s ease;
+            display: inline-block;
         }
 
-        .player-container:hover {
-            transform: scale(1.02);
-        }
-
-        iframe,
         audio {
             width: 100%;
-            border: none;
-            border-radius: 10px;
-        }
-
-        footer {
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            color: #777;
+            max-width: 400px;
+            margin-top: 1rem;
         }
     </style>
 </head>
 
 <body>
-
     <h1>Radio Comunidad Paz Valencia</h1>
-    <p class="verse">"Y la paz de Dios, que sobrepasa todo entendimiento, guardará sus corazones y sus pensamientos en
-        Cristo Jesús." – Filipenses 4:7</p>
+    <p class="verso">“El Señor es mi pastor, nada me faltará.” — Salmo 23:1</p>
 
     <div class="player-container">
-        <!-- Cambia este src con la URL de tu stream Icecast o de tu servidor externo -->
-        <audio controls autoplay>
+        <p>Presiona play para comenzar a escuchar:</p>
+        <audio controls>
             <source src="https://b26c-84-126-228-227.ngrok-free.app/live.mp3" type="audio/mpeg">
-            Tu navegador no soporta el reproductor de audio.
+            Tu navegador no soporta audio.
         </audio>
     </div>
-
-    <footer>
-        &copy; 2025 Comunidad Cristiana Paz Valencia. Todos los derechos reservados.
-    </footer>
-
 </body>
 
 </html>
